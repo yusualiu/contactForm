@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
  
 
-  $int= mt_rand(1262055681,1262055681);
-  $generatedFile = $firstname.'_'.$lastname.$int.'.txt'; 
+  $timestamp = time();
+  $generatedFile = $firstname.'_'.$lastname.$timestamp.'.txt'; 
   // file handling
   $myfile = fopen($generatedFile, "w") or die("Unable to open file!");
   $txt = "Your firstname is ".$firstname."\n";
